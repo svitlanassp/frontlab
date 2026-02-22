@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelFlow - Users</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            
+            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+                <div class="logo-placeholder">
+                    <img src="icons/logo.svg" alt="TravelFlow Logo">
+                </div>
+                <span class="brand-name">TravelFlow</span>
+            </a>
+            
+            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
+                
+                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
+                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
+                </a>
+
+                <a href="users.html" class="profile-placeholder" title="User Management">
+                    <img src="icons/user.svg" alt="User Profile">
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="content-wrapper users-wrapper">
+        <div class="users-card">
+            
+            <div class="users-header">
+                <h2>Users</h2>
+                <button class="btn-add-user" onclick="window.location.href='create-user.html'">Add User</button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Role</th>
+                            <th style="text-align: right;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="view-user.html" style="color: #575EA2; text-decoration: none; font-weight: bold;">ivan_traveler</a></td>
+                            <td>Admin</td>
+                            <td style="text-align: right;">
+                                <div class="trip-actions" style="display: flex; justify-content: flex-end; gap: 10px;">
+                                    <button class="action-btn" onclick="window.location.href='edit-user.html'">
+                                        <img src="icons/edit.svg" alt="Edit">
+                                    </button>
+                                    <button class="action-btn" onclick="window.location.href='delete-user.html'">
+                                        <img src="icons/delete.svg" alt="Delete">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="view-user.html" style="color: #575EA2; text-decoration: none; font-weight: bold;">olena_traveler</a></td>
+                            <td>Editor</td>
+                            <td style="text-align: right;">
+                                <div class="trip-actions" style="display: flex; justify-content: flex-end; gap: 10px;">
+                                    <button class="action-btn" onclick="window.location.href='edit-user.html'">
+                                        <img src="icons/edit.svg" alt="Edit">
+                                    </button>
+                                    <button class="action-btn" onclick="window.location.href='delete-user.html'">
+                                        <img src="icons/delete.svg" alt="Delete">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelFlow - Create User</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            
+            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+                <div class="logo-placeholder">
+                    <img src="icons/logo.svg" alt="TravelFlow Logo">
+                </div>
+                <span class="brand-name">TravelFlow</span>
+            </a>
+            
+            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
+                
+                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
+                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
+                </a>
+
+                <a href="users.html" class="profile-placeholder" title="User Management">
+                    <img src="icons/user.svg" alt="User Profile">
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="content-wrapper create-user-wrapper">
+        <div class="create-user-card">
+            
+            <div class="users-header">
+                <h2>Create user</h2>
+            </div>
+
+            <form class="form-content">
+                <div class="fields-group">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm password</label>
+                        <input type="password" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Role</label>
+                        <select name="role">
+                            <option value="regular">Regular</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <button type="button" class="btn-secondary" onclick="window.location.href='users.html'">Cancel</button>
+                    <button type="submit" class="btn-ok" onclick="event.preventDefault(); window.location.href='users.html'">OK</button>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+</body>
+</html>

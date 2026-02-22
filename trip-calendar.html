@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelFlow - Schedule</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            
+            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+                <div class="logo-placeholder">
+                    <img src="icons/logo.svg" alt="TravelFlow Logo">
+                </div>
+                <span class="brand-name">TravelFlow</span>
+            </a>
+            
+            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
+                
+                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
+                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
+                </a>
+
+                <a href="users.html" class="profile-placeholder" title="User Management">
+                    <img src="icons/user.svg" alt="User Profile">
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="section-header">
+            <div class="tabs-group">
+                <button class="tab-btn active">Schedule</button>
+                <span class="divider"></span>
+                <button class="tab-btn" onclick="window.location.href='trip-budget.html'">Budget</button>
+            </div>
+            
+            <div class="controls-group">
+                <select class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="sightseeing" style="color: #3182CE;">● Sightseeing</option>
+                    <option value="food" style="color: #E53E3E;">● Food</option>
+                    <option value="party" style="color: #7E3AF2;">● Party</option>
+                    <option value="transport" style="color: #D69E2E;">● Activity</option>
+                </select>
+                
+                <button class="btn-add-event">+</button>
+            </div>
+        </section>
+
+        <div class="calendar-scroll-container">
+            <div class="calendar-grid">
+                
+                <div class="calendar-day-column">
+                    <div class="day-header">June 10</div>
+                    <div class="day-content"></div> 
+                </div>
+
+                <div class="calendar-day-column">
+                    <div class="day-header">June 11</div>
+                    <div class="day-content">
+                        <article class="event-card">
+                            <div class="event-row">
+                                <h3 class="event-title">Museum of Art</h3>
+                                <span class="event-price">$25</span>
+                            </div>
+                            <div class="event-row meta-info">
+                                <span class="event-time">11:00 am</span>
+                                <span class="category-tag sightseeing">Sightseeing</span>
+                            </div>
+                        </article>
+
+                        <article class="event-card">
+                            <div class="event-row">
+                                <h3 class="event-title">Lunch at Bistro</h3>
+                                <span class="event-price">$45</span>
+                            </div>
+                            <div class="event-row meta-info">
+                                <span class="event-time">1:30 pm</span>
+                                <span class="category-tag food">Food</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="calendar-day-column">
+                    <div class="day-header">June 12</div>
+                    <div class="day-content">
+                        <article class="event-card">
+                            <div class="event-row">
+                                <h3 class="event-title">City Bus Tour</h3>
+                                <span class="event-price">$15</span>
+                            </div>
+                            <div class="event-row meta-info">
+                                <span class="event-time">10:00 am</span>
+                                <span class="category-tag sightseeing">Sightseeing</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="calendar-day-column">
+                    <div class="day-header">June 13</div>
+                    <div class="day-content">
+                         <article class="event-card">
+                            <div class="event-row">
+                                <h3 class="event-title">Roof Party</h3>
+                                <span class="event-price">$60</span>
+                            </div>
+                            <div class="event-row meta-info">
+                                <span class="event-time">9:00 pm</span>
+                                <span class="category-tag party">Party</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="calendar-day-column">
+                    <div class="day-header">June 14</div>
+                    <div class="day-content"></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
