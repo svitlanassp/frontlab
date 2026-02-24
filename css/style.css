@@ -341,10 +341,10 @@ button, input, select, textarea {
   outline: none;
 }
 .form-group input::-moz-placeholder {
-  color: #94A3B8;
+  color: #757575;
 }
 .form-group input::placeholder {
-  color: #94A3B8;
+  color: #757575;
 }
 .form-group input:focus {
   box-shadow: 0 0 0 2px rgba(87, 94, 162, 0.2);
@@ -375,10 +375,10 @@ select {
   outline: none;
 }
 select::-moz-placeholder {
-  color: #94A3B8;
+  color: #757575;
 }
 select::placeholder {
-  color: #94A3B8;
+  color: #757575;
 }
 select:focus {
   box-shadow: 0 0 0 2px rgba(87, 94, 162, 0.2);
@@ -412,10 +412,10 @@ select {
   outline: none;
 }
 .controls-group .filter-select::-moz-placeholder {
-  color: #94A3B8;
+  color: #757575;
 }
 .controls-group .filter-select::placeholder {
-  color: #94A3B8;
+  color: #757575;
 }
 .controls-group .filter-select:focus {
   box-shadow: 0 0 0 2px rgba(87, 94, 162, 0.2);
@@ -719,6 +719,7 @@ select {
   flex-direction: column;
   gap: 4px;
   transition: all 0.2s;
+  cursor: pointer;
 }
 .event-card:hover {
   border-color: #575EA2;
@@ -888,4 +889,81 @@ select {
   display: flex;
   justify-content: center;
   gap: 15px;
+}
+
+.form-modal-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.form-modal-card::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.form-modal-card::-webkit-scrollbar-thumb {
+  background: #b9b9b9;
+  border-radius: 10px;
+}
+.form-modal-card h2 {
+  font-size: 1.8rem;
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+.form-modal-card .form-row {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+.form-modal-card .form-row .form-group {
+  flex: 1;
+}
+.form-modal-card textarea {
+  width: 100%;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1a1a1a;
+  outline: none;
+}
+.form-modal-card textarea::-moz-placeholder {
+  color: #757575;
+}
+.form-modal-card textarea::placeholder {
+  color: #757575;
+}
+.form-modal-card textarea:focus {
+  box-shadow: 0 0 0 2px rgba(87, 94, 162, 0.2);
+}
+.form-modal-card textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+.form-modal-card input[type=file] {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px dashed #eeeeee;
+  cursor: pointer;
+  color: #959595;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.form-modal-card .form-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+}
+.form-modal-card .form-footer .btn-ok {
+  padding: 10px 25px;
 }

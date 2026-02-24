@@ -186,6 +186,7 @@
     flex-direction: column;
     gap: 4px;
     transition: all 0.2s;
+    cursor: pointer;
 
     &:hover {
         border-color: $primary-purple;
@@ -323,5 +324,61 @@
         display: flex;
         justify-content: center;
         gap: 15px;
+    }
+}
+
+.form-modal-card {
+    @include card-base;
+    width: 100%;
+    max-width: 450px; 
+    padding: 30px;
+    max-height: 90vh;
+    overflow-y: auto;
+    @include custom-scrollbar;
+    
+    h2 {
+        font-size: 1.8rem;
+        margin: 0 0 20px 0;
+        color: $text-dark;
+        font-weight: bold;
+    }
+
+    .form-row {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+        
+        .form-group {
+            flex: 1;
+        }
+    }
+
+    textarea {
+        @include input-style;
+        resize: vertical;
+        min-height: 80px;
+        font-family: inherit;
+    }
+
+    input[type="file"] {
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px dashed $border-subtle;
+        cursor: pointer;
+        color: $text-muted;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+
+    .form-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-top: 25px;
+
+        .btn-ok {
+            padding: 10px 25px; 
+        }
     }
 }

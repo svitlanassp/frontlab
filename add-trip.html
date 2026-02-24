@@ -35,7 +35,7 @@
     <main class="content-wrapper">
         <section class="section-header">
             <h1>My Trips</h1>
-            <button class="btn-add" onclick="window.location.href='add-trip.html'">Add Trip</button>
+            <button class="btn-add">Add Trip</button>
         </section>
 
         <section class="trips-grid">
@@ -54,10 +54,10 @@
                             <span class="budget-amount">$170 / $500</span>
                             <div class="trip-actions" style="display: flex; gap: 8px;">
                                 
-                                <button class="action-btn" onclick="event.stopPropagation();window.location.href='edit-trip.html'">
+                                <button class="action-btn" onclick="event.stopPropagation();">
                                     <img src="icons/edit.svg" alt="Edit">
                                 </button>
-                                <button class="action-btn" onclick="event.stopPropagation();window.location.href='delete-trip.html'">
+                                <button class="action-btn" onclick="event.stopPropagation();">
                                     <img src="icons/delete.svg" alt="Delete">
                                 </button>
                                 
@@ -216,6 +216,60 @@
 
         </section>
     </main>
+
+    <div class="modal-overlay">
+        <div class="form-modal-card">
+            <h2>New Trip</h2>
+            
+            <form class="form-content">
+                <div class="fields-group">
+                    
+                    <div class="form-group">
+                        <label>Trip Title</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Start Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>End Date</label>
+                            <input type="date">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Budget</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cover Photo</label>
+                        <input type="file" accept="image/*">
+                    </div>
+
+                </div>
+
+                <div class="form-footer">
+                    <button type="button" class="btn-secondary" onclick="window.location.href='index.html'">Cancel</button>
+                    <button type="button" class="btn-ok" onclick="window.location.href='index.html'">Create Trip</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

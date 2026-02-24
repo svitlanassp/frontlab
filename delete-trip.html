@@ -57,7 +57,7 @@
                                 <button class="action-btn" onclick="event.stopPropagation();window.location.href='edit-trip.html'">
                                     <img src="icons/edit.svg" alt="Edit">
                                 </button>
-                                <button class="action-btn" onclick="event.stopPropagation();window.location.href='delete-trip.html'">
+                                <button class="action-btn" onclick="event.stopPropagation();">
                                     <img src="icons/delete.svg" alt="Delete">
                                 </button>
                                 
@@ -215,6 +215,20 @@
             </article>
 
         </section>
+        <div class="modal-overlay">
+            <div class="confirm-card">
+                <h2>Delete Confirmation</h2>
+                <p>
+                    Are you sure you want to delete this trip?
+                    <strong>This action can't be undone</strong>
+                </p>
+                <div class="confirm-actions">
+                    <button class="btn-secondary" onclick="history.back()">Cancel</button>
+                    <button class="btn-ok" onclick="history.back()" >Delete</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
 </body>

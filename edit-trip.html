@@ -35,7 +35,7 @@
     <main class="content-wrapper">
         <section class="section-header">
             <h1>My Trips</h1>
-            <button class="btn-add" onclick="window.location.href='add-trip.html'">Add Trip</button>
+            <button class="btn-add">Add Trip</button>
         </section>
 
         <section class="trips-grid">
@@ -54,10 +54,10 @@
                             <span class="budget-amount">$170 / $500</span>
                             <div class="trip-actions" style="display: flex; gap: 8px;">
                                 
-                                <button class="action-btn" onclick="event.stopPropagation();window.location.href='edit-trip.html'">
+                                <button class="action-btn" onclick="event.stopPropagation();">
                                     <img src="icons/edit.svg" alt="Edit">
                                 </button>
-                                <button class="action-btn" onclick="event.stopPropagation();window.location.href='delete-trip.html'">
+                                <button class="action-btn" onclick="event.stopPropagation();">
                                     <img src="icons/delete.svg" alt="Delete">
                                 </button>
                                 
@@ -216,6 +216,66 @@
 
         </section>
     </main>
+
+    <div class="modal-overlay">
+        <div class="form-modal-card">
+            <h2>Edit Trip</h2>
+            
+            <form class="form-content">
+                <div class="fields-group">
+                    
+                    <div class="form-group">
+                        <label>Trip Title</label>
+                        <input type="text" value="Trip to Paris">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <input type="text" value="France">
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" value="Paris">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Start Date</label>
+                            <input type="date" value="2026-06-10">
+                        </div>
+                        <div class="form-group">
+                            <label>End Date</label>
+                            <input type="date" value="2026-06-13">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Budget ($)</label>
+                        <input type="number" value="500">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cover Photo</label>
+                        
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                            <img src="images/paris.jpg" alt="Current Cover" style="width: 60px; height: 40px; border-radius: 4px; object-fit: cover;">
+                            <span style="color: #6B7280; font-size: 14px;">paris.jpg</span>
+                        </div>
+
+                        <input type="file" accept="image/*" title="Upload new photo to replace current">
+                    </div>
+
+                </div>
+
+                <div class="form-footer">
+                    <button type="button" class="btn-secondary" onclick="window.location.href='index.html'">Cancel</button>
+                    <button type="button" class="btn-ok" onclick="window.location.href='index.html'">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

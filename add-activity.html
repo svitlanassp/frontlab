@@ -46,9 +46,10 @@
                     <option value="sightseeing" style="color: #3182CE;">● Sightseeing</option>
                     <option value="food" style="color: #E53E3E;">● Food</option>
                     <option value="party" style="color: #7E3AF2;">● Party</option>
+                    <option value="transport" style="color: #D69E2E;">● Activity</option>
                 </select>
                 
-                <button class="btn-add-event" onclick="window.location.href='add-activity.html'">+</button>
+                <button class="btn-add-event">+</button>
             </div>
         </section>
 
@@ -63,7 +64,7 @@
                 <div class="calendar-day-column">
                     <div class="day-header">June 11</div>
                     <div class="day-content">
-                        <article class="event-card" onclick="window.location.href='edit-activity.html'">
+                        <article class="event-card">
                             <div class="event-row">
                                 <h3 class="event-title">Museum of Art</h3>
                                 <span class="event-price">$25</span>
@@ -127,6 +128,61 @@
             </div>
         </div>
     </main>
+
+    <div class="modal-overlay">
+        <div class="form-modal-card">
+            <h2>Add Activity</h2>
+            
+            <form class="form-content">
+                <div class="fields-group">
+                    
+                    <div class="form-group">
+                        <label>Activity Name</label>
+                        <input type="text" placeholder="e.g. Louvre Museum">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Time (Optional)</label>
+                            <input type="time">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Category</label>
+                        <input list="categories" name="category" placeholder="Sightseeing, Food, Party...">
+                        <datalist id="categories">
+                            <option value="Sightseeing">
+                            <option value="Food">
+                            <option value="Party">
+                            <option value="Transport">
+                            <option value="Stay">
+                        </datalist>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cost</label>
+                        <input type="number" placeholder="0" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Notes & Links</label>
+                        <textarea placeholder="Add location link, booking info or notes..."></textarea>
+                    </div>
+
+                </div>
+
+                <div class="form-footer">
+                    <button type="button" class="btn-secondary" onclick="history.back()">Cancel</button>
+                    <button type="button" class="btn-ok" onclick="history.back()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
     
 </body>
 </html>
