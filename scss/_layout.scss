@@ -91,10 +91,14 @@
 .page-center-wrapper {
     min-height: calc(100vh - 80px); 
     display: flex;
-    align-items: flex-start; 
     justify-content: center;
+    align-items: center;    
     background-color: $bg-main;
-    padding-top: 50px;
+    padding: 20px;         
+    
+    > * {
+        margin-bottom: 5vh; 
+    }
 }
 
 .section-header {

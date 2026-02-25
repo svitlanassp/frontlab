@@ -102,10 +102,13 @@ button, input, select, textarea {
 .page-center-wrapper {
   min-height: calc(100vh - 80px);
   display: flex;
-  align-items: flex-start;
   justify-content: center;
+  align-items: center;
   background-color: #d9d9d9;
-  padding-top: 50px;
+  padding: 20px;
+}
+.page-center-wrapper > * {
+  margin-bottom: 5vh;
 }
 
 .section-header {
@@ -690,7 +693,7 @@ select {
 }
 .auth-card h2 {
   font-size: 2rem;
-  margin-bottom: 24px;
+  margin: 10px 0 24px 0;
   color: #1a1a1a;
   text-align: left;
 }
@@ -741,22 +744,21 @@ select {
 
 .trips-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 220px);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
   margin-top: 20px;
   width: 100%;
-  justify-content: space-between;
 }
 
 .trip-card {
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  width: 200px;
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 220px;
+  min-height: 250px;
   position: relative;
 }
 .trip-card .stretched-link {
@@ -777,7 +779,7 @@ select {
 }
 .trip-card .trip-image-placeholder {
   width: 100%;
-  height: 80px;
+  height: 120px;
   background-color: #eeeeee;
 }
 .trip-card .trip-image-placeholder img {
@@ -793,11 +795,11 @@ select {
   padding-bottom: 10px;
 }
 .trip-card .trip-info .trip-title {
-  font-size: 16px;
-  margin: 0 0 5px 0;
+  font-size: 18px;
+  margin: 0 0 8px 0;
 }
 .trip-card .trip-info .trip-location, .trip-card .trip-info .trip-dates {
-  font-size: 12px;
+  font-size: 13px;
   margin: 0 0 5px 0;
   color: #757575;
 }
@@ -808,7 +810,7 @@ select {
 }
 .trip-card .budget-footer .budget-amount {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .calendar-scroll-container {
@@ -826,7 +828,8 @@ select {
 }
 .calendar-scroll-container {
   width: 100%;
-  max-height: 700px;
+  height: calc(100vh - 220px);
+  min-height: 500px;
   overflow: auto;
   border: 1px solid #eeeeee;
 }
@@ -834,12 +837,13 @@ select {
 .calendar-grid {
   display: flex;
   min-width: 100%;
+  height: 100%;
   background-color: #ffffff;
 }
 .calendar-grid .calendar-day-column {
   flex: 1 0 20%;
   min-width: 220px;
-  min-height: 500px;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #eeeeee;
@@ -863,6 +867,7 @@ select {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex-grow: 1;
 }
 
 .event-card {
@@ -1009,4 +1014,83 @@ select {
 }
 .expenses-container .expenses-table .cost-value {
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .calendar-scroll-container {
+    height: calc(100vh - 250px);
+    max-height: none;
+  }
+  .page-center-wrapper {
+    align-items: center;
+  }
+  .page-center-wrapper > * {
+    margin-bottom: 20vh;
+  }
+  .main-header {
+    padding: 10px 15px;
+  }
+  .main-header .brand-name {
+    font-size: 24px;
+  }
+  .content-wrapper {
+    padding: 15px;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .section-header .controls-group {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .auth-card,
+  .users-card,
+  .form-modal-card,
+  .confirm-card,
+  .budget-summary-card {
+    padding: 20px;
+  }
+  .form-modal-card .form-row {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .form-modal-card .form-row .form-group {
+    margin-bottom: 15px;
+  }
+  .trips-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .trip-card {
+    width: 100%;
+  }
+  .trip-card .trip-image-placeholder {
+    height: 140px;
+  }
+  .budget-summary-card .summary-stats {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .budget-summary-card .summary-stats .stat-item {
+    flex: 1 1 45%;
+  }
+  .table-container,
+  .expenses-container {
+    overflow-x: auto;
+    padding-right: 0;
+  }
+  .table-container table,
+  .expenses-container table {
+    min-width: 500px;
+  }
+}
+@media (max-width: 480px) {
+  .budget-summary-card .summary-stats .stat-item {
+    flex: 1 1 100%;
+  }
+  .section-header .tabs-group .tab-btn {
+    font-size: 20px;
+  }
 }
