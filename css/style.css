@@ -167,7 +167,7 @@ button, input, select, textarea {
 .btn-add {
   display: inline-block;
   background-color: #575EA2;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -188,7 +188,7 @@ button, input, select, textarea {
 .btn-add-event {
   display: inline-block;
   background-color: #575EA2;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -215,7 +215,7 @@ button, input, select, textarea {
 .btn-login {
   display: inline-block;
   background-color: #575EA2;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -236,7 +236,7 @@ button, input, select, textarea {
 .btn-secondary {
   display: inline-block;
   background-color: #575EA2;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -261,7 +261,7 @@ button, input, select, textarea {
 .btn-ok {
   display: inline-block;
   background-color: #575EA2;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -294,6 +294,11 @@ button, input, select, textarea {
 .action-btn:hover {
   opacity: 0.7;
   transform: scale(1.1);
+}
+.action-btn img {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
 .form-group {
@@ -420,10 +425,10 @@ select {
   font-size: 0.85rem;
   cursor: pointer;
   border: 2px solid #575EA2;
-  background-color: white;
+  background-color: #ffffff;
 }
 .filter-select option {
-  background: white;
+  background: #ffffff;
   color: #1a1a1a;
   padding: 10px;
 }
@@ -531,30 +536,6 @@ select {
 .actions-group.align-right {
   justify-content: flex-end;
 }
-.actions-group .action-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  color: #959595;
-  transition: transform 0.2s, opacity 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.actions-group .action-btn img {
-  width: 20px;
-  height: 20px;
-}
-.actions-group .action-btn:hover {
-  opacity: 0.7;
-  transform: scale(1.1);
-}
-.actions-group .action-btn img {
-  width: 18px;
-  height: 18px;
-  display: block;
-}
 
 .alert-error {
   display: flex;
@@ -649,7 +630,7 @@ select {
 }
 .form-modal-card input[type=file] {
   padding: 10px;
-  background-color: #f8f9fa;
+  background-color: #e8e8e8;
   border: 1px dashed #eeeeee;
   cursor: pointer;
   color: #959595;
@@ -932,7 +913,7 @@ select {
 }
 .event-card .event-time {
   font-size: 12px;
-  color: #888;
+  color: #959595;
 }
 
 .budget-summary-card {

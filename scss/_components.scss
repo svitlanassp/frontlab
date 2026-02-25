@@ -34,6 +34,12 @@
 
 .action-btn {
     @include btn-icon;
+        
+    img {
+        width: 18px; 
+        height: 18px;
+        display: block;
+   }
 }
 
 // FORMS & INPUTS
@@ -43,7 +49,7 @@
     label {
         display: block;
         margin-bottom: 8px;
-        color: #757575;
+        color: $text-light-gray;
         font-weight: 500;
         font-size: 0.9rem;
     }
@@ -54,7 +60,7 @@
 
     input.is-invalid {
         border: 1px solid $status-spent;
-        background-color: #FFF5F5;
+        background-color: $light-red;
         
         &:focus {
             box-shadow: 0 0 0 2px rgba($status-spent, 0.2);
@@ -89,15 +95,15 @@ select {
     font-size: 0.85rem;
     cursor: pointer;
     border: 2px solid $primary-purple; 
-    background-color: white;
+    background-color: $white;
 
     option {
-        background: white;
+        background: $white;
         color: $text-dark;
         padding: 10px;
-        &.opt-sightseeing { color: #3182CE; }
-        &.opt-food { color: #E53E3E; }
-        &.opt-party { color: #7E3AF2; }
+        &.opt-sightseeing { color: $tag-blue; }
+        &.opt-food { color: $tag-red; }
+        &.opt-party { color: $tag-purple; }
     }
 }
 
@@ -130,9 +136,9 @@ select {
     font-weight: 600;
     text-transform: lowercase;
     
-    &.sightseeing { background: #E2F2FF; color: #3182CE; }
-    &.food { background: #FFF5F5; color: #E53E3E; }
-    &.party { background: #F3E8FF; color: #7E3AF2; }
+    &.sightseeing { background: $light-blue; color: $tag-blue; }
+    &.food { background: $light-red; color: $tag-red; }
+    &.party { background: $light-purple; color: $tag-purple; }
 }
 
 .budget-progress-container {
@@ -146,21 +152,10 @@ select {
     display: flex;
     gap: 10px;
     align-items: center;
-    z-index: 2; // Піднімаємо надstretched-link
+    z-index: 2; 
 
-    // Якщо група в таблиці або картці, притискаємо її вправо
     &.align-right {
         justify-content: flex-end;
-    }
-
-    .action-btn {
-        @include btn-icon; // Твій існуючий міксин
-        
-        img {
-            width: 18px; // Уніфікуємо розмір іконок
-            height: 18px;
-            display: block;
-        }
     }
 }
 
@@ -168,8 +163,8 @@ select {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #FFF5F5;
-    border: 1px solid #FEB2B2;
+    background-color: $light-red;
+    border: 1px solid $red-border;
     color: $status-spent; 
     padding: 12px 16px;
     border-radius: 8px;
@@ -228,7 +223,7 @@ select {
 
     input[type="file"] {
         padding: 10px;
-        background-color: #f8f9fa;
+        background-color: $input-bg;
         border: 1px dashed $border-subtle;
         cursor: pointer;
         color: $text-muted;

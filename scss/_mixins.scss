@@ -3,7 +3,7 @@
 @mixin btn-primary($width: auto, $py: 8px, $px: 16px, $font-size: 1rem) {
     display: inline-block;
     background-color: $primary-purple;
-    color: white;
+    color: $white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -78,7 +78,7 @@
     width: 100%;
     padding: 12px 16px;
     box-sizing: border-box;
-    background-color: #e8e8e8; 
+    background-color: $input-bg; 
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -86,7 +86,7 @@
     outline: none;
     
     &::placeholder {
-        color: #757575;
+        color: $text-light-gray;
     }
 
     &:focus {
@@ -94,8 +94,8 @@
     }
 
     &:disabled {
-        background-color: #f5f5f5;
-        color: #757575;           
+        background-color: $input-disabled;
+        color: $text-light-gray;           
         cursor: not-allowed;      
         border-color: $border-subtle; 
         opacity: 0.8;             

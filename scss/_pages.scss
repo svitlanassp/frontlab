@@ -78,9 +78,8 @@
     display: flex;
     flex-direction: column;
     min-height: 220px;
-    position: relative; // Додаємо обов'язково
+    position: relative; 
 
-    // Наша невидима ссилка на всю картку
     .stretched-link {
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
@@ -171,24 +170,23 @@
 }
 
 .event-card {
-    position: relative; // ВАЖЛИВО: щоб ссилка не вилетіла за межі картки
+    position: relative; 
     background-color: $white;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    padding: 8px 12px; // ВЕРТАЄМО ТВІЙ ПАДІНГ
+    padding: 8px 12px;
     display: flex;
     flex-direction: column;
     gap: 4px;
     transition: all 0.2s;
 
-    // Створюємо невидимий шар поверх всього
     .stretched-link {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1; // щоб бути над текстом, але всередині картки
+        z-index: 1; 
     }
 
     &:hover {
@@ -196,7 +194,6 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    // Решта твоїх стилів без змін
     .event-row {
         display: flex;
         justify-content: space-between;
@@ -206,7 +203,7 @@
     .event-title { font-size: 14px; font-weight: 600; margin: 0; line-height: 1.2; color: $text-dark; }
     .event-price { font-size: 13px; font-weight: 700; color: $text-dark; white-space: nowrap; }
     .meta-info { align-items: center; margin-top: 2px; }
-    .event-time { font-size: 12px; color: #888; }
+    .event-time { font-size: 12px; color: $text-muted; }
 }
 
 .budget-summary-card {
@@ -226,7 +223,7 @@
     
     .stat-value {
         font-size: 28px; font-weight: bold;
-        &.total { color: #2D3748; }
+        &.total { color: $status-total; }
         &.spent { color: $status-spent; }
         &.remaining { color: $status-remaining; }
     }
