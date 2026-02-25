@@ -56,14 +56,13 @@
 
     input {
         @include input-style;
-    }
-
-    input.is-invalid {
-        border: 1px solid $status-spent;
-        background-color: $light-red;
-        
-        &:focus {
-            box-shadow: 0 0 0 2px rgba($status-spent, 0.2);
+        &.is-invalid {
+            border: 1px solid $status-spent;
+            background-color: $light-red;
+            
+            &:focus {
+                box-shadow: 0 0 0 2px rgba($status-spent, 0.2);
+            }
         }
     }
 
@@ -79,13 +78,12 @@ select {
     @include input-style;
     cursor: pointer;
     appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"24"%20height%3D"24"%20viewBox%3D"0%200%2024%2024" fill="none" stroke="%23575EA2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path%20d%3D"M6%209l6%206%206-6"%2F><%2Fsvg>');
+    background-image: $icon_chevron_down;
     background-repeat: no-repeat;
     background-position: right 16px center;
     background-size: 16px;
     padding-right: 40px;
 }
-
 
 .filter-select {
     @include input-style;
@@ -174,7 +172,6 @@ select {
 }
 
 //MODALS
-
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -208,10 +205,6 @@ select {
         display: flex;
         gap: 15px;
         width: 100%;
-        
-        .form-group {
-            flex: 1;
-        }
     }
 
     textarea {
@@ -242,6 +235,10 @@ select {
             padding: 10px 25px; 
         }
     }
+}
+
+.form-row .form-group {
+    flex: 1;
 }
 
 .confirm-card {
@@ -277,4 +274,3 @@ select {
         gap: 15px;
     }
 }
-

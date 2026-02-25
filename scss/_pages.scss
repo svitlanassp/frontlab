@@ -1,5 +1,4 @@
 // 1. AUTHENTICATION PAGES (Login)
-
 .auth-card {
     @include card-base;
     padding: 20px 40px 40px 40px;
@@ -30,7 +29,7 @@
         align-items: flex-start;
         margin-bottom: 25px;
 
-        h2 {
+        h2 { 
             margin: 0;
             font-size: 2rem; 
             color: $text-dark;
@@ -60,7 +59,6 @@
     }
 }
 
-
 // 3. APP PAGES (Trips, Calendar, Budget)
 .trips-grid {
     display: grid;
@@ -78,13 +76,6 @@
     flex-direction: column;
     min-height: 250px; 
     position: relative; 
-
-    .stretched-link {
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        z-index: 1;
-    }
-
     cursor: pointer; 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
@@ -93,11 +84,18 @@
         box-shadow: 0 8px 15px rgba(0,0,0,0.1); 
     }
 
+    .stretched-link {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 1;
+    }
+
     .trip-image-placeholder {
         width: 100%;
         height: 120px; 
         background-color: $border-subtle;
-        img {
+        
+        img { 
             width: 100%;
             height: 100%;
             object-fit: cover; 
@@ -109,31 +107,30 @@
         padding: 15px;
         flex-grow: 1;
         padding-bottom: 10px;
-
-        .trip-title { font-size: 18px; margin: 0 0 8px 0; } 
-        .trip-location, .trip-dates { 
-            font-size: 13px; margin: 0 0 5px 0; 
-            color: $text-light-gray; 
-        }
+    }
+    
+    .trip-title { font-size: 18px; margin: 0 0 8px 0; } 
+    .trip-location, .trip-dates { 
+        font-size: 13px; margin: 0 0 5px 0; 
+        color: $text-light-gray; 
     }
     
     .budget-footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .budget-amount { font-weight: bold; font-size: 15px; }
     }
+
+    .budget-amount { font-weight: bold; font-size: 15px; }
 }
 
+// CALENDAR
 .calendar-scroll-container {
     @include card-base;
     @include custom-scrollbar;
     width: 100%;
-    
-   
     height: calc(100vh - 220px); 
     min-height: 500px; 
-    
     overflow: auto;
     border: 1px solid $border-subtle;
 }
@@ -174,6 +171,7 @@
     }
 }
 
+// EVENT CARD 
 .event-card {
     position: relative; 
     background-color: $white;
@@ -185,18 +183,14 @@
     gap: 4px;
     transition: all 0.2s;
 
-    .stretched-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1; 
-    }
-
     &:hover {
         border-color: $primary-purple;
         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .stretched-link {
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%; z-index: 1; 
     }
 
     .event-row {
@@ -205,12 +199,14 @@
         align-items: flex-start;
         gap: 10px;
     }
+
     .event-title { font-size: 14px; font-weight: 600; margin: 0; line-height: 1.2; color: $text-dark; }
     .event-price { font-size: 13px; font-weight: 700; color: $text-dark; white-space: nowrap; }
-    .meta-info { align-items: center; margin-top: 2px; }
+    .meta-info { display: flex; align-items: center; margin-top: 2px; } 
     .event-time { font-size: 12px; color: $text-muted; }
 }
 
+// BUDGET SUMMARY
 .budget-summary-card {
     @include card-base;
     padding: 25px;
@@ -238,6 +234,7 @@
     }
 }
 
+// EXPENSES
 .expenses-container {
     @include card-base;
     max-height: 450px;
@@ -247,15 +244,8 @@
     .expenses-table {
         @include table-base;
     
-        th:last-child {
-            text-align: right;
-            padding-right: 20px; 
-        }
-
-        td:last-child {
-            text-align: right;
-            padding-right: 15px;
-        }
+        th:last-child { text-align: right; padding-right: 20px; }
+        td:last-child { text-align: right; padding-right: 15px; }
 
         .actions-cell {
             display: flex;
