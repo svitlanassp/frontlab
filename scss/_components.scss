@@ -4,23 +4,15 @@
     padding: 12px 28px;
 }
 
-.btn-add-expense {
-    @include btn-primary;
-    padding: 12px 32px;
-    min-width: 160px;
-}
-
 .btn-add-event {
     @include btn-primary;
     width: 45px;
     height: 45px;
-    border-radius: 8px;
     font-size: 24px;
     padding: 0;
-}
-
-.btn-add-user {
-    @include btn-primary(auto, 10px, 20px, 0.9rem);
+    display: inline-flex;   
+    align-items: center;     
+    justify-content: center; 
 }
 
 .btn-login {
@@ -88,26 +80,24 @@ select {
     padding-right: 40px;
 }
 
-.controls-group {
-    display: flex;
-    align-items: center;
-    gap: 15px;
 
-    .filter-select {
-        @include input-style;
-        padding: 8px 30px 8px 12px;
-        width: auto;
-        min-width: 130px;
-        font-size: 0.85rem;
-        cursor: pointer;
-        border: 2px solid $primary-purple; 
-        background-color: white;
+.filter-select {
+    @include input-style;
+    padding: 8px 30px 8px 12px;
+    width: auto;
+    min-width: 130px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border: 2px solid $primary-purple; 
+    background-color: white;
 
-        option {
-            background: white;
-            color: $text-dark;
-            padding: 10px;
-        }
+    option {
+        background: white;
+        color: $text-dark;
+        padding: 10px;
+        &.opt-sightseeing { color: #3182CE; }
+        &.opt-food { color: #E53E3E; }
+        &.opt-party { color: #7E3AF2; }
     }
 }
 
@@ -128,27 +118,7 @@ select {
     padding-right: 5px;
 
     table {
-        width: 100%;
-        border-collapse: collapse;
-        
-        th {
-            position: sticky; 
-            top: 0;
-            background: $white;
-            text-align: left;
-            padding: 12px 10px;
-            color: $text-muted;
-            font-size: 14px;
-            border-bottom: 2px solid $border-subtle;
-            z-index: 10;
-        }
-
-        td {
-            padding: 15px 10px;
-            border-bottom: 1px solid $border-subtle;
-            font-size: 15px;
-            color: $text-dark;
-        }
+        @include table-base;
     }
 }
 
@@ -172,6 +142,28 @@ select {
     }
 }
 
+.actions-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 2; // Піднімаємо надstretched-link
+
+    // Якщо група в таблиці або картці, притискаємо її вправо
+    &.align-right {
+        justify-content: flex-end;
+    }
+
+    .action-btn {
+        @include btn-icon; // Твій існуючий міксин
+        
+        img {
+            width: 18px; // Уніфікуємо розмір іконок
+            height: 18px;
+            display: block;
+        }
+    }
+}
+
 .alert-error {
     display: flex;
     align-items: center;
@@ -184,5 +176,110 @@ select {
     margin-bottom: 20px;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+//MODALS
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.form-modal-card {
+    @include card-base;
+    width: 100%;
+    max-width: 450px; 
+    padding: 30px;
+    max-height: 90vh;
+    overflow-y: auto;
+    @include custom-scrollbar;
+    
+    h2 {
+        font-size: 1.8rem;
+        margin: 0 0 20px 0;
+        color: $text-dark;
+        font-weight: bold;
+    }
+
+    .form-row {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+        
+        .form-group {
+            flex: 1;
+        }
+    }
+
+    textarea {
+        @include input-style;
+        resize: vertical;
+        min-height: 80px;
+        font-family: inherit;
+    }
+
+    input[type="file"] {
+        padding: 10px;
+        background-color: #f8f9fa;
+        border: 1px dashed $border-subtle;
+        cursor: pointer;
+        color: $text-muted;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+
+    .form-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-top: 25px;
+
+        .btn-ok {
+            padding: 10px 25px; 
+        }
+    }
+}
+
+.confirm-card {
+    @include card-base;
+    width: 100%;
+    max-width: 340px; 
+    padding: 30px;
+    text-align: center;
+
+    h2 {
+        font-size: 1.5rem;
+        color: $text-dark;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: $text-muted;
+        font-size: 1rem;
+        margin-bottom: 25px;
+        line-height: 1.5;
+
+        strong {
+            display: block;
+            color: $status-spent; 
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+    }
+
+    .confirm-actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
 }
 

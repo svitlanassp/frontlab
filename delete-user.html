@@ -11,43 +11,69 @@
     <header class="main-header">
         <div class="header-container">
             
-            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+            <a href="index.html" class="logo-group">
                 <div class="logo-placeholder">
                     <img src="icons/logo.svg" alt="TravelFlow Logo">
                 </div>
                 <span class="brand-name">TravelFlow</span>
             </a>
             
-            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
+            <div class="user-profile-group">
                 
-                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
-                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
+                <a href="login.html" class="logout-btn" title="Logout">
+                    <img src="icons/logout.svg" alt="Logout">
                 </a>
 
-                <div class="profile-placeholder">
+                <a href="users.html" class="profile-placeholder" title="User Management">
                     <img src="icons/user.svg" alt="User Profile">
-                </div>
+                </a>
             </div>
 
         </div>
     </header>
 
-    <main class="content-wrapper users-wrapper">
-        <div class="users-card" style="filter: blur(2px); pointer-events: none;">
+    <main class="content-wrapper page-center-wrapper">
+        <div class="users-card">
+            
             <div class="users-header">
                 <h2>Users</h2>
-                <button class="btn-add-user">Add User</button>
+                <button class="btn-add">Add User</button>
             </div>
+
             <div class="table-container">
                 <table>
                     <thead>
-                        <tr><th>Username</th><th>Role</th></tr>
+                        <tr>
+                            <th>Username</th>
+                            <th>Role</th>
+                            <th style="text-align: right;">Actions</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>ivan_traveler</td><td>Admin</td></tr>
+                        <tr>
+                            <td><a href="view-user.html">ivan_traveler</a></td>
+                            <td>Admin</td>
+                            <td class="text-right">
+                                <div class="actions-group align-right">
+                                    <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                    <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="view-user.html">olena_traveler</a></td>
+                            <td>Regular</td>
+                            <td class="text-right">
+                                <div class="actions-group align-right">
+                                    <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                    <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
+
         </div>
 
         <div class="modal-overlay">
@@ -58,8 +84,8 @@
                     <strong>This action can't be undone</strong>
                 </p>
                 <div class="confirm-actions">
-                    <button class="btn-secondary" onclick="history.back()">Cancel</button>
-                    <button class="btn-ok" onclick="history.back()" >Delete</button>
+                    <a href="users.html" class="btn-secondary">Cancel</a>
+                    <a href="users.html" class="btn-ok">Delete</a>
                 </div>
             </div>
         </div>

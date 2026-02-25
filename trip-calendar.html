@@ -11,17 +11,17 @@
     <header class="main-header">
         <div class="header-container">
             
-            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+            <a href="index.html" class="logo-group">
                 <div class="logo-placeholder">
                     <img src="icons/logo.svg" alt="TravelFlow Logo">
                 </div>
                 <span class="brand-name">TravelFlow</span>
             </a>
             
-            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
+            <div class="user-profile-group">
                 
-                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
-                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
+                <a href="login.html" class="logout-btn" title="Logout">
+                    <img src="icons/logout.svg" alt="Logout">
                 </a>
 
                 <a href="users.html" class="profile-placeholder" title="User Management">
@@ -37,18 +37,18 @@
             <div class="tabs-group">
                 <button class="tab-btn active">Schedule</button>
                 <span class="divider"></span>
-                <button class="tab-btn" onclick="window.location.href='trip-budget.html'">Budget</button>
+                <a href="trip-budget.html" class="tab-btn">Budget</a>
             </div>
             
             <div class="controls-group">
                 <select class="filter-select">
                     <option value="all">All Categories</option>
-                    <option value="sightseeing" style="color: #3182CE;">● Sightseeing</option>
-                    <option value="food" style="color: #E53E3E;">● Food</option>
-                    <option value="party" style="color: #7E3AF2;">● Party</option>
+                    <option value="sightseeing" class="opt-sightseeing">● Sightseeing</option>
+                    <option value="food" class="opt-food">● Food</option>
+                    <option value="party" class="opt-party">● Party</option>
                 </select>
-                
-                <button class="btn-add-event" onclick="window.location.href='add-activity.html'">+</button>
+
+                <a href="add-activity.html" class="btn-add-event">+</a>
             </div>
         </section>
 
@@ -63,7 +63,9 @@
                 <div class="calendar-day-column">
                     <div class="day-header">June 11</div>
                     <div class="day-content">
-                        <article class="event-card" onclick="window.location.href='edit-activity.html'">
+                        <article class="event-card">
+                            <a href="edit-activity.html" class="stretched-link"></a>
+
                             <div class="event-row">
                                 <h3 class="event-title">Museum of Art</h3>
                                 <span class="event-price">$25</span>

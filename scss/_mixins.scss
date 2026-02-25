@@ -92,4 +92,36 @@
     &:focus {
         box-shadow: 0 0 0 2px rgba($primary-purple, 0.2);
     }
+
+    &:disabled {
+        background-color: #f5f5f5;
+        color: #757575;           
+        cursor: not-allowed;      
+        border-color: $border-subtle; 
+        opacity: 0.8;             
+    }
+}
+
+@mixin table-base {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th {
+        position: sticky; 
+        top: 0;
+        background: $white;
+        text-align: left;
+        padding: 15px 10px; 
+        color: $text-muted;
+        font-size: 14px;
+        border-bottom: 2px solid $border-subtle;
+        z-index: 10;
+    }
+
+    td {
+        padding: 15px 10px;
+        border-bottom: 1px solid $border-subtle;
+        font-size: 15px;
+        color: $text-dark;
+    }
 }

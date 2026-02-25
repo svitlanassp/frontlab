@@ -11,17 +11,17 @@
     <header class="main-header">
         <div class="header-container">
             
-            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+            <a href="index.html" class="logo-group">
                 <div class="logo-placeholder">
                     <img src="icons/logo.svg" alt="TravelFlow Logo">
                 </div>
                 <span class="brand-name">TravelFlow</span>
             </a>
             
-            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
+            <div class="user-profile-group">
                 
-                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
-                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
+                <a href="login.html" class="logout-btn" title="Logout">
+                    <img src="icons/logout.svg" alt="Logout">
                 </a>
 
                 <a href="users.html" class="profile-placeholder" title="User Management">
@@ -40,7 +40,7 @@
 
         <section class="trips-grid">
             
-    <article class="trip-card" onclick="window.location.href='trip-calendar.html'">
+    <article class="trip-card">
                 <div class="trip-image-placeholder">
                     <img src="images/paris.jpg" alt="Paris Trip">
                 </div>
@@ -52,15 +52,9 @@
                         <div class="progress-bar"><div class="progress-fill" style="width: 30%;"></div></div>
                         <div class="budget-footer">
                             <span class="budget-amount">$170 / $500</span>
-                            <div class="trip-actions" style="display: flex; gap: 8px;">
-                                
-                                <button class="action-btn" onclick="event.stopPropagation();">
-                                    <img src="icons/edit.svg" alt="Edit">
-                                </button>
-                                <button class="action-btn" onclick="event.stopPropagation();">
-                                    <img src="icons/delete.svg" alt="Delete">
-                                </button>
-                                
+                            <div class="actions-group">
+                                <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
                             </div>
                         </div>
                     </div>
@@ -79,7 +73,7 @@
                         <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
                         <div class="budget-footer">
                             <span class="budget-amount">$0 / $200</span>
-                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
                                 <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
                                 <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
                             </div>
@@ -100,7 +94,7 @@
                         <div class="progress-bar"><div class="progress-fill" style="width: 25%;"></div></div>
                         <div class="budget-footer">
                             <span class="budget-amount">$105 / $500</span>
-                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
                                 <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
                                 <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
                             </div>
@@ -121,7 +115,7 @@
                         <div class="progress-bar"><div class="progress-fill" style="width: 25%;"></div></div>
                         <div class="budget-footer">
                             <span class="budget-amount">$300 / $1200</span>
-                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
                                 <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
                                 <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
                             </div>
@@ -142,7 +136,7 @@
                         <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
                         <div class="budget-footer">
                             <span class="budget-amount">$0 / $500</span>
-                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
                                 <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
                                 <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
                             </div>
@@ -163,7 +157,7 @@
                         <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
                         <div class="budget-footer">
                             <span class="budget-amount">$0 / $500</span>
-                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
                                 <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
                                 <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
                             </div>
@@ -184,7 +178,7 @@
                         <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
                         <div class="budget-footer">
                             <span class="budget-amount">$0 / $1000</span>
-                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
                                 <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
                                 <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
                             </div>
@@ -205,7 +199,7 @@
                         <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
                         <div class="budget-footer">
                             <span class="budget-amount">$295 / $300</span>
-                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
                                 <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
                                 <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
                             </div>
@@ -270,8 +264,8 @@
                 </div>
 
                 <div class="form-footer">
-                    <button type="button" class="btn-secondary" onclick="window.location.href='index.html'">Cancel</button>
-                    <button type="button" class="btn-ok" onclick="window.location.href='index.html'">Save</button>
+                    <a href="index.html" class="btn-secondary">Cancel</a>
+                    <a href="index.html" class="btn-ok">Save</a>
                 </div>
             </form>
         </div>

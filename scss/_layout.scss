@@ -18,6 +18,14 @@
         display: flex;
         align-items: center;
         gap: 25px;
+        text-decoration: none;
+        color: inherit;       
+    }
+
+    .user-profile-group {
+        display: flex;        
+        align-items: center;   
+        gap: 20px;             
     }
 
     .logo-placeholder {
@@ -59,7 +67,15 @@
     }
 
     .logout-btn {
+        display: flex;         
+        align-items: center;   
         transition: opacity 0.2s;
+        
+        img {                  
+            width: 24px;
+            height: 24px;
+        }
+
         &:hover {
             opacity: 0.6; 
         }
@@ -70,6 +86,15 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 70px;
+}
+
+.page-center-wrapper {
+    min-height: calc(100vh - 80px); 
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    background-color: $bg-main;
+    padding-top: 50px;
 }
 
 .section-header {
@@ -126,16 +151,8 @@
     }
 
     .controls-group {
-        display: flex;
-        gap: 15px;
-        align-items: center;
-
-        .filter-placeholder {
-            background-color: $gray-placeholder;
-            padding: 10px 25px;
-            border-radius: 8px;
-            color: $white;
-            font-weight: bold;
-        }
-    }
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 }

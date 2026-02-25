@@ -11,17 +11,17 @@
     <header class="main-header">
         <div class="header-container">
             
-            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+            <a href="index.html" class="logo-group">
                 <div class="logo-placeholder">
                     <img src="icons/logo.svg" alt="TravelFlow Logo">
                 </div>
                 <span class="brand-name">TravelFlow</span>
             </a>
             
-            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
+            <div class="user-profile-group">
                 
-                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
-                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
+                <a href="login.html" class="logout-btn" title="Logout">
+                    <img src="icons/logout.svg" alt="Logout">
                 </a>
 
                 <a href="users.html" class="profile-placeholder" title="User Management">
@@ -32,8 +32,8 @@
         </div>
     </header>
 
-    <main class="content-wrapper create-user-wrapper">
-        <div class="create-user-card">
+    <main class="content-wrapper page-center-wrapper">
+        <div class="users-card">
             
             <div class="users-header">
                 <h2>Create user</h2>
@@ -66,8 +66,8 @@
                 </div>
 
                 <div class="form-footer">
-                    <button type="button" class="btn-secondary" onclick="window.location.href='users.html'">Cancel</button>
-                    <button type="submit" class="btn-ok" onclick="event.preventDefault(); window.location.href='users.html'">OK</button>
+                    <a href="users.html" class="btn-secondary">Cancel</a>
+                    <a href="users.html" class="btn-ok">Save</a>
                 </div>
             </form>
 

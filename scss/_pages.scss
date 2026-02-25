@@ -1,19 +1,8 @@
 // 1. AUTHENTICATION PAGES (Login)
 
-.login-wrapper {
-    min-height: calc(100vh - 80px); 
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: $bg-main;
-    padding-top: 50px;
-}
-
 .auth-card {
-    background-color: white;
+    @include card-base;
     padding: 20px 40px 40px 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     width: 100%;
     max-width: 500px;
     
@@ -26,10 +15,6 @@
 }
 
 // 2. USER MANAGEMENT PAGES
-.users-wrapper {
-    @extend .login-wrapper; 
-}
-
 .users-card {
     @include card-base;
     width: 100%;
@@ -52,15 +37,7 @@
             font-weight: bold;
         }
     }
-}
 
-.create-user-wrapper {
-    @extend .login-wrapper;
-}
-
-.create-user-card {
-    @extend .users-card; 
-    
     .form-content {
         flex-grow: 1;
         display: flex;
@@ -74,7 +51,15 @@
         gap: 15px;
         margin-top: 10px;
     }
+
+    td a {
+        color: $primary-purple;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover { text-decoration: underline; }
+    }
 }
+
 
 // 3. APP PAGES (Trips, Calendar, Budget)
 .trips-grid {
@@ -93,6 +78,14 @@
     display: flex;
     flex-direction: column;
     min-height: 220px;
+    position: relative; // Додаємо обов'язково
+
+    // Наша невидима ссилка на всю картку
+    .stretched-link {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 1;
+    }
 
     cursor: pointer; 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -178,28 +171,38 @@
 }
 
 .event-card {
+    position: relative; // ВАЖЛИВО: щоб ссилка не вилетіла за межі картки
     background-color: $white;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    padding: 8px 12px;
+    padding: 8px 12px; // ВЕРТАЄМО ТВІЙ ПАДІНГ
     display: flex;
     flex-direction: column;
     gap: 4px;
     transition: all 0.2s;
-    cursor: pointer;
+
+    // Створюємо невидимий шар поверх всього
+    .stretched-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; // щоб бути над текстом, але всередині картки
+    }
 
     &:hover {
         border-color: $primary-purple;
         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
+    // Решта твоїх стилів без змін
     .event-row {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         gap: 10px;
     }
-
     .event-title { font-size: 14px; font-weight: 600; margin: 0; line-height: 1.2; color: $text-dark; }
     .event-price { font-size: 13px; font-weight: 700; color: $text-dark; white-space: nowrap; }
     .meta-info { align-items: center; margin-top: 2px; }
@@ -240,33 +243,16 @@
     padding: 0 20px;
 
     .expenses-table {
-        width: 100%;
-        border-collapse: collapse;
-        
-        th {
-            position: sticky; top: 0;
-            background: $white;
-            text-align: left;
-            padding: 20px 10px;
-            color: $text-muted;
-            font-size: 14px;
-            border-bottom: 2px solid $border-subtle;
-            
-            &:last-child {
-                text-align: right;
-                padding-right: 20px; 
-            }
+        @include table-base;
+    
+        th:last-child {
+            text-align: right;
+            padding-right: 20px; 
         }
 
-        td {
-            padding: 15px 10px;
-            border-bottom: 1px solid $border-subtle;
-            font-size: 15px;
-
-            &:last-child {
-                text-align: right;
-                padding-right: 15px;
-            }
+        td:last-child {
+            text-align: right;
+            padding-right: 15px;
         }
 
         .actions-cell {
@@ -276,109 +262,5 @@
         }
         
         .cost-value { font-weight: bold; }
-    }
-}
-
-// 4. MODALS & OVERLAYS
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-
-.confirm-card {
-    @include card-base;
-    width: 100%;
-    max-width: 340px; 
-    padding: 30px;
-    text-align: center;
-
-    h2 {
-        font-size: 1.5rem;
-        color: $text-dark;
-        margin-bottom: 15px;
-    }
-
-    p {
-        color: $text-muted;
-        font-size: 1rem;
-        margin-bottom: 25px;
-        line-height: 1.5;
-
-        strong {
-            display: block;
-            color: $status-spent; 
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-    }
-
-    .confirm-actions {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    }
-}
-
-.form-modal-card {
-    @include card-base;
-    width: 100%;
-    max-width: 450px; 
-    padding: 30px;
-    max-height: 90vh;
-    overflow-y: auto;
-    @include custom-scrollbar;
-    
-    h2 {
-        font-size: 1.8rem;
-        margin: 0 0 20px 0;
-        color: $text-dark;
-        font-weight: bold;
-    }
-
-    .form-row {
-        display: flex;
-        gap: 15px;
-        width: 100%;
-        
-        .form-group {
-            flex: 1;
-        }
-    }
-
-    textarea {
-        @include input-style;
-        resize: vertical;
-        min-height: 80px;
-        font-family: inherit;
-    }
-
-    input[type="file"] {
-        padding: 10px;
-        background-color: #f8f9fa;
-        border: 1px dashed $border-subtle;
-        cursor: pointer;
-        color: $text-muted;
-        width: 100%;
-        box-sizing: border-box;
-        border-radius: 8px;
-    }
-
-    .form-footer {
-        display: flex;
-        justify-content: flex-end;
-        gap: 15px;
-        margin-top: 25px;
-
-        .btn-ok {
-            padding: 10px 25px; 
-        }
     }
 }

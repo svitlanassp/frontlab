@@ -11,17 +11,17 @@
     <header class="main-header">
         <div class="header-container">
             
-            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+            <a href="index.html" class="logo-group">
                 <div class="logo-placeholder">
                     <img src="icons/logo.svg" alt="TravelFlow Logo">
                 </div>
                 <span class="brand-name">TravelFlow</span>
             </a>
             
-            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
+            <div class="user-profile-group">
                 
-                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
-                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
+                <a href="login.html" class="logout-btn" title="Logout">
+                    <img src="icons/logout.svg" alt="Logout">
                 </a>
 
                 <a href="users.html" class="profile-placeholder" title="User Management">
@@ -32,12 +32,12 @@
         </div>
     </header>
 
-    <main class="content-wrapper users-wrapper">
+    <main class="content-wrapper page-center-wrapper">
         <div class="users-card">
             
             <div class="users-header">
                 <h2>Users</h2>
-                <button class="btn-add-user" onclick="window.location.href='create-user.html'">Add User</button>
+                <a href="create-user.html" class="btn-add">Add User</a>
             </div>
 
             <div class="table-container">
@@ -51,30 +51,22 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="view-user.html" style="color: #575EA2; text-decoration: none; font-weight: bold;">ivan_traveler</a></td>
+                            <td><a href="view-user.html" class="user-link">ivan_traveler</a></td>
                             <td>Admin</td>
-                            <td style="text-align: right;">
-                                <div class="trip-actions" style="display: flex; justify-content: flex-end; gap: 10px;">
-                                    <button class="action-btn" onclick="window.location.href='edit-user.html'">
-                                        <img src="icons/edit.svg" alt="Edit">
-                                    </button>
-                                    <button class="action-btn" onclick="window.location.href='delete-user.html'">
-                                        <img src="icons/delete.svg" alt="Delete">
-                                    </button>
+                            <td class="text-right">
+                                <div class="actions-group align-right">
+                                    <a href="edit-user.html" class="action-btn"><img src="icons/edit.svg" alt="Edit"></a>
+                                    <a href="delete-user.html" class="action-btn"><img src="icons/delete.svg" alt="Delete"></a>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><a href="view-user.html" style="color: #575EA2; text-decoration: none; font-weight: bold;">olena_traveler</a></td>
+                            <td><a href="view-user.html" class="user-link">olena_traveler</a></td>
                             <td>Regular</td>
-                            <td style="text-align: right;">
-                                <div class="trip-actions" style="display: flex; justify-content: flex-end; gap: 10px;">
-                                    <button class="action-btn" onclick="window.location.href='edit-user.html'">
-                                        <img src="icons/edit.svg" alt="Edit">
-                                    </button>
-                                    <button class="action-btn" onclick="window.location.href='delete-user.html'">
-                                        <img src="icons/delete.svg" alt="Delete">
-                                    </button>
+                            <td class="text-right">
+                                <div class="actions-group align-right">
+                                    <a href="edit-user.html" class="action-btn"><img src="icons/edit.svg" alt="Edit"></a>
+                                    <a href="delete-user.html" class="action-btn"><img src="icons/delete.svg" alt="Delete"></a>
                                 </div>
                             </td>
                         </tr>

@@ -11,17 +11,17 @@
     <header class="main-header">
         <div class="header-container">
             
-            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+            <a href="index.html" class="logo-group">
                 <div class="logo-placeholder">
                     <img src="icons/logo.svg" alt="TravelFlow Logo">
                 </div>
                 <span class="brand-name">TravelFlow</span>
             </a>
             
-            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
+            <div class="user-profile-group">
                 
-                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
-                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
+                <a href="login.html" class="logout-btn" title="Logout">
+                    <img src="icons/logout.svg" alt="Logout">
                 </a>
 
                 <a href="users.html" class="profile-placeholder" title="User Management">
@@ -37,16 +37,15 @@
             <div class="tabs-group">
                 <button class="tab-btn active">Schedule</button>
                 <span class="divider"></span>
-                <button class="tab-btn" onclick="window.location.href='trip-budget.html'">Budget</button>
+                <button class="tab-btn">Budget</button>
             </div>
             
             <div class="controls-group">
                 <select class="filter-select">
                     <option value="all">All Categories</option>
-                    <option value="sightseeing" style="color: #3182CE;">● Sightseeing</option>
-                    <option value="food" style="color: #E53E3E;">● Food</option>
-                    <option value="party" style="color: #7E3AF2;">● Party</option>
-                    <option value="transport" style="color: #D69E2E;">● Activity</option>
+                    <option value="sightseeing" class="opt-sightseeing">● Sightseeing</option>
+                    <option value="food" class="opt-food">● Food</option>
+                    <option value="party" class="opt-party">● Party</option>
                 </select>
                 
                 <button class="btn-add-event">+</button>
@@ -177,8 +176,8 @@
                 </div>
 
                 <div class="form-footer">
-                    <button type="button" class="btn-secondary" onclick="history.back()">Cancel</button>
-                    <button type="button" class="btn-ok" onclick="history.back()">Save</button>
+                    <a href="trip-calendar.html" class="btn-secondary">Cancel</a>
+                    <a href="trip-calendar.html" class="btn-ok">Save</a>
                 </div>
             </form>
         </div>
