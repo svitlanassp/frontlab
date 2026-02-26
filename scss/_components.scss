@@ -190,10 +190,8 @@ select {
     width: 100%;
     max-width: 450px; 
     padding: 30px;
+    max-height: 90vh;
     overflow-y: auto;
-
-    box-sizing: border-box; 
-    max-height: 85dvh; 
     @include custom-scrollbar;
     
     h2 {
@@ -241,7 +239,6 @@ select {
 
 .form-row .form-group {
     flex: 1;
-    min-width: 0;
 }
 
 .confirm-card {

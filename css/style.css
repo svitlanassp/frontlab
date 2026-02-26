@@ -341,12 +341,6 @@ button, input, select, textarea {
   border-color: #eeeeee;
   opacity: 0.8;
 }
-.form-group input input[type=date] {
-  width: 100%;
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
-}
 .form-group input.is-invalid {
   border: 1px solid #E53E3E;
   background-color: #FFF5F5;
@@ -388,12 +382,6 @@ select:disabled {
   border-color: #eeeeee;
   opacity: 0.8;
 }
-select input[type=date] {
-  width: 100%;
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
-}
 select {
   cursor: pointer;
   -webkit-appearance: none;
@@ -432,12 +420,6 @@ select {
   cursor: not-allowed;
   border-color: #eeeeee;
   opacity: 0.8;
-}
-.filter-select input[type=date] {
-  width: 100%;
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
 }
 .filter-select {
   padding: 8px 30px 8px 12px;
@@ -592,9 +574,8 @@ select {
   width: 100%;
   max-width: 450px;
   padding: 30px;
+  max-height: 90vh;
   overflow-y: auto;
-  box-sizing: border-box;
-  max-height: 85dvh;
 }
 .form-modal-card::-webkit-scrollbar {
   height: 8px;
@@ -642,12 +623,6 @@ select {
   border-color: #eeeeee;
   opacity: 0.8;
 }
-.form-modal-card textarea input[type=date] {
-  width: 100%;
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none;
-}
 .form-modal-card textarea {
   resize: vertical;
   min-height: 80px;
@@ -675,7 +650,6 @@ select {
 
 .form-row .form-group {
   flex: 1;
-  min-width: 0;
 }
 
 .confirm-card {
@@ -759,6 +733,7 @@ select {
   justify-content: flex-end;
   gap: 15px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .users-card td a {
   color: #575EA2;
