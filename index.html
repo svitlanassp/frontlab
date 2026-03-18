@@ -10,16 +10,20 @@
 
     <header class="main-header">
         <div class="header-container">
-            
+
+            <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
             <a href="index.html" class="logo-group">
                 <div class="logo-placeholder">
                     <img src="icons/logo.svg" alt="TravelFlow Logo">
                 </div>
                 <span class="brand-name">TravelFlow</span>
             </a>
-            
+
+            <div class="user-profile-group" style="display: flex; align-items: center; gap: 20px;">
             <div class="user-profile-group">
-                
+
+                <a href="login.html" class="logout-btn" title="Logout" style="display: flex; align-items: center;">
+                    <img src="icons/logout.svg" alt="Logout" style="width: 24px; height: 24px;">
                 <a href="login.html" class="logout-btn" title="Logout">
                     <img src="icons/logout.svg" alt="Logout">
                 </a>
@@ -35,62 +39,202 @@
     <main class="content-wrapper">
         <section class="section-header">
             <h1>My Trips</h1>
-            <button class="btn-add" id="btn-open-modal">Add Trip</button>
+            <button class="btn-add" onclick="window.location.href='add-trip.html'">Add Trip</button>
+            <a href="add-trip.html" class="btn-add">Add Trip</a>
         </section>
 
-        <section class="trips-grid" id="trips-grid"></section>
+        <section class="trips-grid">
 
+    <article class="trip-card" onclick="window.location.href='trip-calendar.html'">
+            <article class="trip-card">
+                <a href="trip-calendar.html" class="stretched-link"></a>
+
+                <div class="trip-image-placeholder">
+                    <img src="images/paris.jpg" alt="Paris Trip">
+                </div>
+                <div class="trip-info">
+                    <h2 class="trip-title">Trip to Paris</h2>
+                    <p class="trip-location">Paris, France</p>
+                    <p class="trip-dates">June 10 - June 13, 2026</p>
+                    <div class="budget-progress-container">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 30%;"></div></div>
+                        <div class="budget-footer">
+                            <span class="budget-amount">$170 / $500</span>
+                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                                
+                                <button class="action-btn" onclick="event.stopPropagation();window.location.href='edit-trip.html'">
+                            <div class="actions-group">
+                                <a href="edit-trip.html" class="action-btn" title="Edit">
+                                    <img src="icons/edit.svg" alt="Edit">
+                                </button>
+                                <button class="action-btn" onclick="event.stopPropagation();window.location.href='delete-trip.html'">
+                                </a>
+                                <a href="delete-trip.html" class="action-btn" title="Delete">
+                                    <img src="icons/delete.svg" alt="Delete">
+                                </button>
+                                
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="trip-card">
+                <div class="trip-image-placeholder">
+                    <img src="images/kyiv.jpg" alt="Kyiv Trip">
+                </div>
+                <div class="trip-info">
+                    <h2 class="trip-title">Kyiv Weekend</h2>
+                    <p class="trip-location">Kyiv, Ukraine</p>
+                    <p class="trip-dates">May 01 - May 03, 2026</p>
+                    <div class="budget-progress-container">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                        <div class="budget-footer">
+                            <span class="budget-amount">$0 / $200</span>
+                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
+                                <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="trip-card">
+                <div class="trip-image-placeholder">
+                    <img src="images/berlin.jpg" alt="Berlin Trip">
+                </div>
+                <div class="trip-info">
+                    <h2 class="trip-title">Berlin Tech</h2>
+                    <p class="trip-location">Berlin, Germany</p>
+                    <p class="trip-dates">Oct 01 - Oct 05, 2026</p>
+                    <div class="budget-progress-container">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 25%;"></div></div>
+                        <div class="budget-footer">
+                            <span class="budget-amount">$105 / $500</span>
+                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
+                                <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="trip-card">
+                <div class="trip-image-placeholder">
+                    <img src="images/madeira.jpg" alt="Madeira Trip">
+                </div>
+                <div class="trip-info">
+                    <h2 class="trip-title">Madeira Island</h2>
+                    <p class="trip-location">Madeira, Portugal</p>
+                    <p class="trip-dates">Nov 10 - Nov 20, 2026</p>
+                    <div class="budget-progress-container">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 25%;"></div></div>
+                        <div class="budget-footer">
+                            <span class="budget-amount">$300 / $1200</span>
+                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
+                                <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="trip-card">
+                <div class="trip-image-placeholder">
+                    <img src="images/amsterdam.jpg" alt="Amsterdam Trip">
+                </div>
+                <div class="trip-info">
+                    <h2 class="trip-title">Amsterdam</h2>
+                    <p class="trip-location">Netherlands</p>
+                    <p class="trip-dates">Aug 20 - Aug 23, 2026</p>
+                    <div class="budget-progress-container">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                        <div class="budget-footer">
+                            <span class="budget-amount">$0 / $500</span>
+                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
+                                <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="trip-card">
+                <div class="trip-image-placeholder">
+                    <img src="images/london.jpg" alt="London Trip">
+                </div>
+                <div class="trip-info">
+                    <h2 class="trip-title">London Eye</h2>
+                    <p class="trip-location">London, UK</p>
+                    <p class="trip-dates">Oct 12 - Oct 18, 2026</p>
+                    <div class="budget-progress-container">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                        <div class="budget-footer">
+                            <span class="budget-amount">$0 / $500</span>
+                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
+                                <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="trip-card">
+                <div class="trip-image-placeholder">
+                    <img src="images/rome.jpg" alt="Rome Trip">
+                </div>
+                <div class="trip-info">
+                    <h2 class="trip-title">Rome Eternal</h2>
+                    <p class="trip-location">Rome, Italy</p>
+                    <p class="trip-dates">Sept 12 - Sept 18, 2026</p>
+                    <div class="budget-progress-container">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                        <div class="budget-footer">
+                            <span class="budget-amount">$0 / $1000</span>
+                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
+                                <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="trip-card">
+                <div class="trip-image-placeholder">
+                    <img src="images/krakow.jpg" alt="Krakow Trip">
+                </div>
+                <div class="trip-info">
+                    <h2 class="trip-title">Krakow City</h2>
+                    <p class="trip-location">Krakow, Poland</p>
+                    <p class="trip-dates">Jan 05 - Jan 08, 2026</p>
+                    <div class="budget-progress-container">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                        <div class="budget-footer">
+                            <span class="budget-amount">$295 / $300</span>
+                            <div class="trip-actions" style="display: flex; gap: 8px;">
+                            <div class="actions-group">
+                                <button class="action-btn"><img src="icons/edit.svg" alt="Edit"></button>
+                                <button class="action-btn"><img src="icons/delete.svg" alt="Delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
     </main>
 
-    <div class="modal-overlay" id="trip-modal" style="display:none;">
-    <div class="form-modal-card">
-        <h2>New Trip</h2>
-        <form id="add-trip-form" class="form-content">
-            <div class="fields-group">
-                <div class="form-group">
-                    <label>Trip Title</label>
-                    <input type="text" id="trip-title" required>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Country</label>
-                        <input type="text" id="trip-country">
-                    </div>
-                    <div class="form-group">
-                        <label>City</label>
-                        <input type="text" id="trip-city">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Start Date</label>
-                        <input type="date" id="trip-start">
-                    </div>
-                    <div class="form-group">
-                        <label>End Date</label>
-                        <input type="date" id="trip-end">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Budget</label>
-                    <input type="number" id="trip-budget">
-                </div>
-                <div class="form-group">
-                    <label>Cover Photo</label>
-                    <input type="file" id="trip-photo" accept="image/*">
-                </div>
-            </div>
-            <div class="form-footer">
-                <button type="button" class="btn-secondary" id="btn-close-modal">Cancel</button>
-                <button type="submit" class="btn-ok">Save</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<script src="js/auth.js"></script>
-<script src="js/api.js"></script>
-<script src="js/index.js"></script>
-
 </body>
-</html>
